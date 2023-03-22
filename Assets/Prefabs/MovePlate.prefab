@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1121040250183468088
+--- !u!1 &8881959150014275885
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1331539883316648570}
-  - component: {fileID: 8020650483670196939}
-  - component: {fileID: -5505484929495232186}
-  - component: {fileID: 3286115377743097531}
+  - component: {fileID: 5648769407809806898}
+  - component: {fileID: 8164625825730489379}
+  - component: {fileID: -8742158839005374897}
+  - component: {fileID: -2458936382007577689}
   m_Layer: 0
-  m_Name: chessPiece
-  m_TagString: Untagged
+  m_Name: MovePlate
+  m_TagString: MovePlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1331539883316648570
+--- !u!4 &5648769407809806898
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121040250183468088}
+  m_GameObject: {fileID: 8881959150014275885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: -3.82, z: -2}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8020650483670196939
+--- !u!212 &8164625825730489379
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121040250183468088}
+  m_GameObject: {fileID: 8881959150014275885}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a38945cdd8f18c409f6be5beb37eac3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 59e941b3228442d44ae9b95af8f547b8, type: 3}
+  m_Color: {r: 0.99831486, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,39 +86,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5505484929495232186
+--- !u!114 &-8742158839005374897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121040250183468088}
+  m_GameObject: {fileID: 8881959150014275885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41109e9439b3f74899dc29b8ed5fe2b, type: 3}
+  m_Script: {fileID: 11500000, guid: a5d6b6a1c7bb72242ad30dd59122cf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  movePlate: {fileID: 8881959150014275885, guid: 419bfa0c2d34a914e9dbce701521e17c, type: 3}
-  white_king: {fileID: 21300000, guid: 6a38945cdd8f18c409f6be5beb37eac3, type: 3}
-  white_queen: {fileID: 21300000, guid: 49bf6a2038fe90f4b9a1c061da0b2bb5, type: 3}
-  white_bishop: {fileID: 21300000, guid: e3f4356a810d4934da6b1a6e8619b16c, type: 3}
-  white_rook: {fileID: 21300000, guid: 002d234ba10a12646af86801446a7db2, type: 3}
-  white_knight: {fileID: 21300000, guid: 5221a6423c76e7340b6ac2bcf7eaedbd, type: 3}
-  white_pawn: {fileID: 21300000, guid: db5d11af69843b544ab139382a2a2515, type: 3}
-  black_king: {fileID: 21300000, guid: a85670487b64024409e875f7e43e671c, type: 3}
-  black_queen: {fileID: 21300000, guid: cba5c416f0570db489fde93ce5f92b3d, type: 3}
-  black_bishop: {fileID: 21300000, guid: a83d6c6ad46cbb74ca91f3ca0005f6c4, type: 3}
-  black_rook: {fileID: 21300000, guid: e3c828779fe8d1347ad2fd3d2da09136, type: 3}
-  black_knight: {fileID: 21300000, guid: 64037d51f40d0334083fd4e4041961dc, type: 3}
-  black_pawn: {fileID: 21300000, guid: 234e8673dd3d24048b12c063ac89cf84, type: 3}
---- !u!61 &3286115377743097531
+  attack: 0
+--- !u!61 &-2458936382007577689
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121040250183468088}
+  m_GameObject: {fileID: 8881959150014275885}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
