@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8020650483670196939}
   - component: {fileID: -5505484929495232186}
   m_Layer: 0
-  m_Name: white_King
+  m_Name: chessPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,9 +103,11 @@ MonoBehaviour:
   white_queen: {fileID: 21300000, guid: 49bf6a2038fe90f4b9a1c061da0b2bb5, type: 3}
   white_bishop: {fileID: 21300000, guid: e3f4356a810d4934da6b1a6e8619b16c, type: 3}
   white_rook: {fileID: 21300000, guid: 002d234ba10a12646af86801446a7db2, type: 3}
+  white_knight: {fileID: 21300000, guid: 5221a6423c76e7340b6ac2bcf7eaedbd, type: 3}
   white_pawn: {fileID: 21300000, guid: db5d11af69843b544ab139382a2a2515, type: 3}
   black_king: {fileID: 21300000, guid: a85670487b64024409e875f7e43e671c, type: 3}
   black_queen: {fileID: 21300000, guid: cba5c416f0570db489fde93ce5f92b3d, type: 3}
   black_bishop: {fileID: 21300000, guid: a83d6c6ad46cbb74ca91f3ca0005f6c4, type: 3}
   black_rook: {fileID: 21300000, guid: e3c828779fe8d1347ad2fd3d2da09136, type: 3}
+  black_knight: {fileID: 21300000, guid: 64037d51f40d0334083fd4e4041961dc, type: 3}
   black_pawn: {fileID: 21300000, guid: 234e8673dd3d24048b12c063ac89cf84, type: 3}
