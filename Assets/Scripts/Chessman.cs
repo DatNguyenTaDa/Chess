@@ -297,6 +297,45 @@ public class Chessman : MonoBehaviour
         mpScript.SetReference(gameObject);
         mpScript.SetCoords(matrixX, matrixY);
     }
+
+    //public bool IsKingInDanger()
+    //{
+    //    int x = GetXBoard();
+    //    int y = GetYBoard();
+    //    GameObject[] chessmen = GameObject.FindGameObjectsWithTag("Chessman");
+    //    foreach (GameObject chessman in chessmen)
+    //    {
+    //        Chessman chessmanScript = chessman.GetComponent<Chessman>();
+    //        if (chessmanScript != null && chessmanScript.player != player)
+    //        {
+    //            int x1 = chessmanScript.GetXBoard();
+    //            int y1 = chessmanScript.GetYBoard();
+    //            if (chessmanScript.ValidMove(x, y) && chessmanScript.name != "white_king" && chessmanScript.name != "black_king")
+    //            {
+    //                return true;
+    //            }
+    //        }
+    //    }
+    //    return false;
+    //}
+
+    //public bool IsChecked(string color)
+    //{
+    //    GameObject king = GameObject.Find(color + "_king");
+    //    foreach (GameObject chessman in GameObject.FindGameObjectsWithTag("Chessman"))
+    //    {
+    //        Chessman chessmanScript = chessman.GetComponent<Chessman>();
+    //        if (chessmanScript.GetPlayer() != color)
+    //        {
+    //            if (chessmanScript.ValidMove(king.GetComponent<Chessman>().GetXBoard(), king.GetComponent<Chessman>().GetYBoard()))
+    //            {
+    //                return true;
+    //            }
+    //        }
+    //    }
+    //    return false;
+    //}
+
     //public void CheckKingInDanger()
     //{
     //    string opponent = (player == "white") ? "black" : "white"; // tìm người chơi đối thủ
@@ -326,11 +365,11 @@ public class Chessman : MonoBehaviour
     //            if (positions[x, y] != null && positions[x, y].name.StartsWith(opponent))
     //            {
     //                Chessman chessman = positions[x, y].GetComponent<Chessman>();
-    //                //if (chessman != null && chessman.IsMovePossible(kingX, kingY))
-    //                //{
-    //                //    Debug.Log(player + "'s king is in danger!");
-    //                //    return;
-    //                //}
+    //                if (chessman != null && chessman.IsMovePossible(kingX, kingY))
+    //                {
+    //                    Debug.Log(player + "'s king is in danger!");
+    //                    return;
+    //                }
     //            }
     //        }
     //    }

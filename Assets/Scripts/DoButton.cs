@@ -14,4 +14,11 @@ public class DoButton : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void Surrender()
+    {
+        if(Chess.instance.GetCurrentPlayer() == "white")
+            Chess.instance.Winner("Black");
+        if(Chess.instance.GetCurrentPlayer() == "black")
+            Chess.instance.Winner("White");
+    }
 }

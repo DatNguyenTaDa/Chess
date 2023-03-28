@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,8 @@ using UnityEngine.UI;
 
 public class Chess : MonoBehaviour
 {
+    public static Chess instance;
+
     [SerializeField] private GameObject chessPiece;
     [SerializeField] private RectTransform panel;
     [SerializeField] private Image whiteKing;
@@ -32,6 +35,10 @@ public class Chess : MonoBehaviour
     [SerializeField] private TMP_Text whiteTurn;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         panel.gameObject.SetActive(false);
@@ -39,8 +46,8 @@ public class Chess : MonoBehaviour
         gameOver = false;
         isMove= true;
 
-        whiteTime = 300;
-        blackTime = 300;
+        whiteTime = 180;
+        blackTime = 180;
         isWhiteCD = true; isBlackCD = false;
 
         whiteKing.gameObject.SetActive(false);
@@ -141,6 +148,8 @@ public class Chess : MonoBehaviour
     {
         if(currentPlayer == "white")
         {
+            whiteTime += 3;
+
             isWhiteCD = false;
             isBlackCD = true;
 
@@ -151,6 +160,8 @@ public class Chess : MonoBehaviour
         }
         else
         {
+            blackTime+= 3;
+
             isWhiteCD = true;
             isBlackCD = false;
 
@@ -170,8 +181,8 @@ public class Chess : MonoBehaviour
         {
             blackTime -= Time.deltaTime;
         }
-        GameObject.FindGameObjectWithTag("WhiteTimer").GetComponent<TMP_Text>().text = "Time remaining: " + Mathf.Round(whiteTime).ToString();
-        GameObject.FindGameObjectWithTag("BlackTimer").GetComponent<TMP_Text>().text = "Time remaining: " + Mathf.Round(blackTime).ToString();
+        GameObject.FindGameObjectWithTag("WhiteTimer").GetComponent<TMP_Text>().text = "Time remaining: " + (((int) whiteTime)/60).ToString() + ":" + (((int)whiteTime) % 60).ToString();
+        GameObject.FindGameObjectWithTag("BlackTimer").GetComponent<TMP_Text>().text = "Time remaining: " + (((int) blackTime)/60).ToString() + ":" + (((int)blackTime) % 60).ToString();
         //for (int x = 0; x < 8; x++)
         //{
         //    if (GetPosition(x, 7) != null && (GetPosition(x, 7).GetComponent<Chessman>().name == "white_pawn"))
@@ -215,5 +226,9 @@ public class Chess : MonoBehaviour
 
         winnerPlayer = winner;
     }
-    
+
+    internal GameObject[,] GetPosition()
+    {
+        throw new NotImplementedException();
+    }
 }
