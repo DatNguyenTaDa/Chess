@@ -1,0 +1,597 @@
+fileFormatVersion: 2
+guid: 63ab9904af23ae343acf414270ae4ff2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_0"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 992
+        width: 337
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b770cae8330685d40b068f72aa2e7ffb
+      internalID: 25752086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_1"
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 997
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce1ee64734b8ed4786d110adeabdcdb
+      internalID: 2012339853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_2"
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 994
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43838ef9b28c1614da0c744bcc220915
+      internalID: 945430874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_3"
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 986
+        width: 337
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0174bc813116940958a710c5f60e1a
+      internalID: 1274629692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_4"
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 774
+        width: 336
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409d8af31c0c1ab4eb4f5f42caabe2bc
+      internalID: -181593553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_5"
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 779
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254caa55933c43c41aae71ba4d21ba23
+      internalID: -1941662710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_6"
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 778
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418098e8a56ce8d44864349bef96ad2a
+      internalID: 1498347428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_7"
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 768
+        width: 336
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f3d3d45968af642b2670693c75b2f6
+      internalID: 877307421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_8"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 549
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bd7b2c3eb05104a84acdc7f73cf542
+      internalID: -1765682458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_9"
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 549
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd82faea71fa0742819501d28b429f5
+      internalID: -336294487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_10"
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 544
+        width: 336
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556a9688a6a3dc946a460c315732d429
+      internalID: -491442832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_11"
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 548
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682d29f812f8afe44be2ca6bd7400b7b
+      internalID: -958108202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_12"
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 548
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8062b511dc6944ba0e1a10554eade6
+      internalID: -847336465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_13"
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 296
+        width: 337
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f215297cd43d18408446243b3e38757
+      internalID: -1530666738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_14"
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 308
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c7c1cb38d282345aba769b6ba61cf0
+      internalID: 1962003081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_15"
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 308
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d493dd4d1523f014ab2619393975d959
+      internalID: 1574509161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_16"
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 290
+        width: 336
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f7065c2e9b6a94fb6076889ff57f88
+      internalID: -1176531881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_17"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 78
+        width: 336
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18f7bffb68bf4344b90e7355d5ae448
+      internalID: -200750602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_18"
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 86
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e35de142cc4e57499fc0ff4d8ead64a
+      internalID: -1158674094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_19"
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 88
+        width: 125
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb8c3b2cd435514393569af13b20867
+      internalID: -230987240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014cool game buttons icon_6002456_20"
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 72
+        width: 336
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd69bce1ff96e6544b3a3f42571bbcff
+      internalID: -770468815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_3": 1274629692
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_20": -770468815
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_5": -1941662710
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_4": -181593553
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_18": -1158674094
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_8": -1765682458
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_16": -1176531881
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_11": -958108202
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_10": -491442832
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_15": 1574509161
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_2": 945430874
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_12": -847336465
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_6": 1498347428
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_9": -336294487
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_0": 25752086
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_1": 2012339853
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_19": -230987240
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_14": 1962003081
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_17": -200750602
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_7": 877307421
+      "\u2014Pngtree\u2014cool game buttons icon_6002456_13": -1530666738
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

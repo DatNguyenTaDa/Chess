@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,8 @@ public class Chessman : MonoBehaviour
     private int yBoard = -1;
 
     private string player;
+
+    private bool isPromotion = false;
 
     [SerializeField] private Sprite white_king, white_queen, white_bishop, white_rook, white_knight, white_pawn;
     [SerializeField] private Sprite black_king, black_queen, black_bishop, black_rook, black_knight, black_pawn;
@@ -36,6 +38,7 @@ public class Chessman : MonoBehaviour
             case "black_pawn": this.GetComponent<SpriteRenderer>().sprite = black_pawn; player = "black"; break;
             case "black_knight": this.GetComponent<SpriteRenderer>().sprite = black_knight; player = "black"; break;
         }
+        
     }
 
     public void SetCoords()
@@ -69,10 +72,44 @@ public class Chessman : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        DestroyMovePlate();
+        if (Chess.isMove)
+        {
+            if (!controller.GetComponent<Chess>().IsGameOver() && controller.GetComponent<Chess>().GetCurrentPlayer() == player)
+            {
+                DestroyMovePlate();
 
-        InitiateMovePlate();
+                InitiateMovePlate();
+            }
+        }
     }
+
+    private void Update()
+    {
+        switch (this.name)
+        {
+            case "black_pawn":
+                if (yBoard == 0)
+                {
+
+                    GameObject cp = controller.GetComponent<Chess>().GetPosition(xBoard, yBoard);
+                    cp.name = "black_queen";
+                    this.GetComponent<SpriteRenderer>().sprite = black_queen; player = "black";
+
+                }
+                break;
+
+            case "white_pawn":
+                if (yBoard == 7)
+                {
+                    GameObject cp = controller.GetComponent<Chess>().GetPosition(xBoard, yBoard);
+                    cp.name = "white_queen";
+                    this.GetComponent<SpriteRenderer>().sprite = white_queen; player = "white";
+
+                }
+                break;
+        }
+    }
+
     public void DestroyMovePlate()
     {
         GameObject[] movePlates = GameObject.FindGameObjectsWithTag("MovePlate");
@@ -120,9 +157,11 @@ public class Chessman : MonoBehaviour
                 LineMovePlate(0, -1);
                 break;
             case "black_pawn":
+                
                 PawnMovePlate(xBoard, yBoard - 1);
                 break;
             case "white_pawn":
+                
                 PawnMovePlate(xBoard, yBoard + 1);
                 break;
         }
@@ -194,9 +233,21 @@ public class Chessman : MonoBehaviour
         Chess sc = controller.GetComponent<Chess>();
         if(sc.PositionOnBoard(x,y))
         {
+
+
             if (sc.GetPosition(x, y) == null)
             {
-                MovePlateSpawn(x, y);
+                if (yBoard == 1 && sc.GetPosition(x, y+1) == null)
+                {
+                    MovePlateSpawn(x, y);
+                    MovePlateSpawn(x, y+1);
+                }
+                else if(yBoard == 6 && sc.GetPosition(x, y-1) == null)
+                {
+                    MovePlateSpawn(x, y);
+                    MovePlateSpawn(x, y-1);
+                }else
+                    MovePlateSpawn(x, y);
             }
             if (sc.PositionOnBoard(x + 1, y) && sc.GetPosition(x + 1, y) != null &&
                 sc.GetPosition(x+1,y).GetComponent<Chessman>().player != player)
@@ -209,6 +260,7 @@ public class Chessman : MonoBehaviour
             {
                 MovePlateAttackSpawn(x - 1, y);
             }
+
         }
     }
     public void MovePlateSpawn(int matrixX, int matrixY)
@@ -223,7 +275,6 @@ public class Chessman : MonoBehaviour
         y += -3.85f;
 
         GameObject mp = Instantiate(movePlate, new Vector3(x, y, -3.0f), Quaternion.identity);
-
         MovePlate mpScript = mp.GetComponent<MovePlate>();
         mpScript.SetReference(gameObject);
         mpScript.SetCoords(matrixX, matrixY);
@@ -246,4 +297,43 @@ public class Chessman : MonoBehaviour
         mpScript.SetReference(gameObject);
         mpScript.SetCoords(matrixX, matrixY);
     }
+    //public void CheckKingInDanger()
+    //{
+    //    string opponent = (player == "white") ? "black" : "white"; // tìm người chơi đối thủ
+
+    //    // tìm vị trí của vua của người chơi hiện tại
+    //    int kingX = -1, kingY = -1;
+    //    GameObject[,] positions = controller.GetComponent<Chess>().GetPosition();
+    //    for (int x = 0; x < 8; x++)
+    //    {
+    //        for (int y = 0; y < 8; y++)
+    //        {
+    //            if (positions[x, y] != null && positions[x, y].name == player + "_king")
+    //            {
+    //                kingX = x;
+    //                kingY = y;
+    //                break;
+    //            }
+    //        }
+    //        if (kingX != -1 && kingY != -1) break;
+    //    }
+
+    //    // kiểm tra xem vua có bị tấn công không
+    //    for (int x = 0; x < 8; x++)
+    //    {
+    //        for (int y = 0; y < 8; y++)
+    //        {
+    //            if (positions[x, y] != null && positions[x, y].name.StartsWith(opponent))
+    //            {
+    //                Chessman chessman = positions[x, y].GetComponent<Chessman>();
+    //                //if (chessman != null && chessman.IsMovePossible(kingX, kingY))
+    //                //{
+    //                //    Debug.Log(player + "'s king is in danger!");
+    //                //    return;
+    //                //}
+    //            }
+    //        }
+    //    }
+    //}
+
 }

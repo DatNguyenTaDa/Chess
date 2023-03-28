@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovePlate
+  - WinnerText
+  - ReStartButton
+  - MoveAudio
+  - AttackAudio
+  - BlackTimer
+  - WhiteTimer
   layers:
   - Default
   - TransparentFX

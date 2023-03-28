@@ -6,6 +6,7 @@ public class MovePlate : MonoBehaviour
 {
     private GameObject controller;
 
+
     GameObject reference = null;
 
     //vi tri cua Board
@@ -24,12 +25,29 @@ public class MovePlate : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        Debug.Log("di chuyen");
+        if(!attack)
+        {
+            GameObject.FindGameObjectWithTag("MoveAudio").GetComponent<AudioSource>().Play();
+        }
         controller = GameObject.FindGameObjectWithTag("GameController");
         if(attack)
         {
             GameObject cp = controller.GetComponent<Chess>().GetPosition(matrixX, matrixY);
 
+            if(cp.name == "white_king")
+            {
+                controller.GetComponent<Chess>().Winner("Black");
+                Chess.isMove = false;
+            }
+            if(cp.name == "black_king")
+            {
+                controller.GetComponent<Chess>().Winner("White");
+                Chess.isMove = false;
+            }
+
             Destroy(cp);
+            GameObject.FindGameObjectWithTag("AttackAudio").GetComponent<AudioSource>().Play();
         }
         controller.GetComponent<Chess>().SetPositionEmpty(reference.GetComponent<Chessman>().GetXBoard(),
             reference.GetComponent<Chessman>().GetYBoard());
@@ -39,6 +57,8 @@ public class MovePlate : MonoBehaviour
         reference.GetComponent<Chessman>().SetCoords();
 
         controller.GetComponent<Chess>().SetPosition(reference);
+
+        controller.GetComponent<Chess>().NextTurn();
 
         reference.GetComponent<Chessman>().DestroyMovePlate();
 
