@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -41,6 +42,7 @@ public class Chess : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 1;
         panel.gameObject.SetActive(false);
 
         gameOver = false;
@@ -208,6 +210,7 @@ public class Chess : MonoBehaviour
             Winner("White");
         if(gameOver == true)
         {
+            Time.timeScale = 0;
             panel.gameObject.SetActive(true);
             GameObject.FindGameObjectWithTag("WinnerText").GetComponent<TMP_Text>().text = winnerPlayer + " is Winner";
             if(winnerPlayer == "White")

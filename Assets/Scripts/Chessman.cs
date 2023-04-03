@@ -12,7 +12,7 @@ public class Chessman : MonoBehaviour
 
     private string player;
 
-    private bool isPromotion = false;
+    //private bool isPromotion = false;
 
     [SerializeField] private Sprite white_king, white_queen, white_bishop, white_rook, white_knight, white_pawn;
     [SerializeField] private Sprite black_king, black_queen, black_bishop, black_rook, black_knight, black_pawn;
