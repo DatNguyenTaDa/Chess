@@ -27,7 +27,7 @@ public class MovePlate : MonoBehaviour
     private void OnMouseUp()
     {
         Debug.Log("di chuyen");
-        if(!attack)
+        if(!attack && DoButton.sound == 1)
         {
             GameObject.FindGameObjectWithTag("MoveAudio").GetComponent<AudioSource>().Play();
         }
@@ -48,7 +48,8 @@ public class MovePlate : MonoBehaviour
             }
 
             Destroy(cp);
-            GameObject.FindGameObjectWithTag("AttackAudio").GetComponent<AudioSource>().Play();
+            if(DoButton.sound == 1)
+                GameObject.FindGameObjectWithTag("AttackAudio").GetComponent<AudioSource>().Play();
         }
         controller.GetComponent<Chess>().SetPositionEmpty(reference.GetComponent<Chessman>().GetXBoard(),
             reference.GetComponent<Chessman>().GetYBoard());

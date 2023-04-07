@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a74892b6f95064341ac41cfd55b8a984, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2703800157237261632, guid: 7e656589a7d21e345b8149c674718471, type: 3}
   movePlate: {fileID: 2703800157237261632, guid: 7e656589a7d21e345b8149c674718471, type: 3}
-  white_king: {fileID: 21300000, guid: 1759481973ebd8d4a9a5b61686542f9b, type: 3}
+  white_king: {fileID: 21300000, guid: a74892b6f95064341ac41cfd55b8a984, type: 3}
   white_queen: {fileID: 21300000, guid: deaced7b1630aba43b12da8e35a23c72, type: 3}
   white_bishop: {fileID: 21300000, guid: c7113dcfd37bfbb4db1d76e2d41e576f, type: 3}
   white_rook: {fileID: 21300000, guid: b16be3e996462744b91629057b600b5b, type: 3}

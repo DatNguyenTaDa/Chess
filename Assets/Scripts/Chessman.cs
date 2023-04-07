@@ -146,15 +146,53 @@ public class Chessman : MonoBehaviour
                 LineMovePlate(-1, -1);
                 break;
             case "white_king":
+                SurroundMovePlate();
+                if(CheckWhiteCastling() == 1 && Chess.whiteCastlingTimes == 0)
+                {
+                    MovePlateSpawn(7,0);
+                }
+                if (CheckWhiteCastling() == 2 && Chess.whiteCastlingTimes == 0)
+                {
+                    MovePlateSpawn(0, 0);
+                }
+                break;
             case "black_king":
                 SurroundMovePlate();
+                //if(CheckBlackCatsling() && GetComponent<Chess>().GetBlackCastlingTimes() == 0)
+                //{
+                //    MovePlateSpawn(0, 7);
+                //}
                 break;
             case "white_rook":
+                LineMovePlate(1, 0);
+                LineMovePlate(0, 1);
+                LineMovePlate(-1, 0);
+                LineMovePlate(0, -1);
+
+                if (CheckWhiteCastling() == 1 && Chess.whiteCastlingTimes == 0)
+                {
+                    MovePlateSpawn(4, 0);
+                }
+                if (CheckWhiteCastling() == 2 && Chess.whiteCastlingTimes == 0)
+                {
+                    MovePlateSpawn(4, 0);
+                }
+                break;
             case "black_rook":
                 LineMovePlate(1, 0);
                 LineMovePlate(0, 1);
                 LineMovePlate(-1, 0);
                 LineMovePlate(0, -1);
+
+                if (CheckBlackCatsling() == 1 && Chess.blackCastlingTimes == 0)
+                {
+                    MovePlateSpawn(4, 7);
+                }
+                if (CheckBlackCatsling() == 2 && Chess.blackCastlingTimes == 0)
+                {
+                    MovePlateSpawn(4, 7);
+                }
+
                 break;
             case "black_pawn":
                 
@@ -227,6 +265,36 @@ public class Chessman : MonoBehaviour
                 MovePlateAttackSpawn(x, y);
             }
         }
+    }
+    public int CheckWhiteCastling()
+    {
+        Chess sc = controller.GetComponent<Chess>();
+        if (sc.GetPosition(5, 0) == null && sc.GetPosition(6, 0) == null &&
+            sc.GetPosition(7, 0).name == "white_rook" && sc.GetPosition(4, 0).name == "white_king")
+        {
+            return 1;
+        }
+        if (sc.GetPosition(1, 0) == null && sc.GetPosition(2, 0) == null && sc.GetPosition(3, 0) == null &&
+            sc.GetPosition(0, 0).name == "white_rook" && sc.GetPosition(4, 0).name == "white_king")
+        {
+            return 2;
+        }
+        return 0;
+    }
+    public int CheckBlackCatsling()
+    {
+        Chess sc = controller.GetComponent<Chess>();
+        if (sc.GetPosition(5, 7) == null && sc.GetPosition(6, 7) == null &&
+            sc.GetPosition(7, 7).name == "black_rook" && sc.GetPosition(4, 7).name == "black_king")
+        {
+            return 1;
+        }
+        if (sc.GetPosition(1, 7) == null && sc.GetPosition(2, 7) == null && sc.GetPosition(3, 7) == null &&
+            sc.GetPosition(0, 7).name == "black_rook" && sc.GetPosition(4, 7).name == "black_king")
+        {
+            return 2;
+        }
+        return 0;
     }
     public void PawnMovePlate(int x, int y)
     {

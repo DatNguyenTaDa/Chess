@@ -35,6 +35,8 @@ public class Chess : MonoBehaviour
     [SerializeField] private TMP_Text blackTurn;
     [SerializeField] private TMP_Text whiteTurn;
 
+    public static int whiteCastlingTimes;
+    public static int blackCastlingTimes;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -42,6 +44,8 @@ public class Chess : MonoBehaviour
     }
     void Start()
     {
+        whiteCastlingTimes = 0;
+        blackCastlingTimes = 0;
         Time.timeScale = 1;
         panel.gameObject.SetActive(false);
 
@@ -150,7 +154,7 @@ public class Chess : MonoBehaviour
     {
         if(currentPlayer == "white")
         {
-            whiteTime += 3;
+            //whiteTime += 3;
 
             isWhiteCD = false;
             isBlackCD = true;
@@ -162,7 +166,7 @@ public class Chess : MonoBehaviour
         }
         else
         {
-            blackTime+= 3;
+            //blackTime+= 3;
 
             isWhiteCD = true;
             isBlackCD = false;
@@ -183,8 +187,10 @@ public class Chess : MonoBehaviour
         {
             blackTime -= Time.deltaTime;
         }
-        GameObject.FindGameObjectWithTag("WhiteTimer").GetComponent<TMP_Text>().text = "Time remaining: " + (((int) whiteTime)/60).ToString() + ":" + (((int)whiteTime) % 60).ToString();
-        GameObject.FindGameObjectWithTag("BlackTimer").GetComponent<TMP_Text>().text = "Time remaining: " + (((int) blackTime)/60).ToString() + ":" + (((int)blackTime) % 60).ToString();
+        GameObject.FindGameObjectWithTag("WhiteTimer").GetComponent<TMP_Text>().text = "Time remaining: " +
+            (((int) whiteTime)/60).ToString() + ":" + (((int)whiteTime) % 60).ToString();
+        GameObject.FindGameObjectWithTag("BlackTimer").GetComponent<TMP_Text>().text = "Time remaining: " +
+            (((int) blackTime)/60).ToString() + ":" + (((int)blackTime) % 60).ToString();
         //for (int x = 0; x < 8; x++)
         //{
         //    if (GetPosition(x, 7) != null && (GetPosition(x, 7).GetComponent<Chessman>().name == "white_pawn"))
@@ -204,6 +210,8 @@ public class Chess : MonoBehaviour
         //        SetPosition(queen);
         //    }
         //}
+        WhiteCastling();
+        BlackCastling();
         if(Mathf.Round(whiteTime) == 0)
             Winner("Black");
         if(Mathf.Round(blackTime) == 0)
@@ -220,6 +228,80 @@ public class Chess : MonoBehaviour
             if(winnerPlayer == "Black")
             {
                 blackKing.gameObject.SetActive(true);
+            }
+        }
+
+    }
+    public void WhiteCastling()
+    {
+        if(whiteCastlingTimes == 0)
+        {
+            if (playerWhite[4].gameObject.transform.position == playerWhite[7].gameObject.transform.position)
+            {
+                //GameObject king = GetPosition(7,0);
+                //SetPositionEmpty(7, 0);
+                Destroy(playerWhite[4]);
+                GameObject newKing = Create("white_king", 6, 0);
+                SetPosition(newKing);
+
+
+                Destroy(playerWhite[7]);
+                GameObject newRook = Create("white_rook", 5, 0);
+                SetPosition(newRook);
+
+                whiteCastlingTimes++;
+            }
+            if (playerWhite[4].gameObject.transform.position == playerWhite[0].gameObject.transform.position)
+            {
+                //GameObject king = GetPosition(7,0);
+                //SetPositionEmpty(7, 0);
+                Destroy(playerWhite[4]);
+                GameObject newKing = Create("white_king", 2, 0);
+                SetPosition(newKing);
+
+
+                Destroy(playerWhite[0]);
+                GameObject newRook = Create("white_rook", 3, 0);
+                SetPosition(newRook);
+
+                whiteCastlingTimes++;
+            }
+        }
+    }
+
+    public void BlackCastling()
+    {
+        if (blackCastlingTimes == 0)
+        {
+            if (playerBlack[4].gameObject.transform.position == playerBlack[7].gameObject.transform.position)
+            {
+                //GameObject king = GetPosition(7,0);
+                //SetPositionEmpty(7, 0);
+                Destroy(playerBlack[4]);
+                GameObject newKing = Create("black_king", 6, 7);
+                SetPosition(newKing);
+
+
+                Destroy(playerBlack[7]);
+                GameObject newRook = Create("black_rook", 5, 7);
+                SetPosition(newRook);
+
+                blackCastlingTimes++;
+            }
+            if (playerBlack[4].gameObject.transform.position == playerBlack[0].gameObject.transform.position)
+            {
+                //GameObject king = GetPosition(7,0);
+                //SetPositionEmpty(7, 0);
+                Destroy(playerBlack[4]);
+                GameObject newKing = Create("black_king", 2, 7);
+                SetPosition(newKing);
+
+
+                Destroy(playerBlack[0]);
+                GameObject newRook = Create("black_rook", 3, 7);
+                SetPosition(newRook);
+
+                blackCastlingTimes++;
             }
         }
     }
