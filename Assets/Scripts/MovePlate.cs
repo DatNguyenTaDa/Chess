@@ -29,6 +29,7 @@ public class MovePlate : MonoBehaviour
         Debug.Log("di chuyen");
         if(!attack && DoButton.sound == 1)
         {
+            Debug.Log("am thanh");
             GameObject.FindGameObjectWithTag("MoveAudio").GetComponent<AudioSource>().Play();
         }
         controller = GameObject.FindGameObjectWithTag("GameController");
